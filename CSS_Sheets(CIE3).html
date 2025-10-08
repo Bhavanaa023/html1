@@ -59,14 +59,15 @@
         .container {
             display: flex;
             flex-direction: column;
-            height: calc(100vh - 80px);
-            /* leave space for bottom sidebar */
-            margin: 0;
+            margin: 0 auto;
             padding: 20px;
             box-sizing: border-box;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
+            height: auto;
+            /* Fix: removes forced full viewport height */
         }
+
 
         .container {
             display: flex;
