@@ -58,10 +58,11 @@ async function createHash(){
     const encoder=new TextEncoder();
     const data=encoder.encode(hashInput);
 //use the web Crypto API to generate a hash
-    const hashbuffer=await crypto.subtle.digest('SHA-256',data);
+    const hashBuffer=await crypto.subtle.digest('SHA-256',data);
 //Convert hash buffer to hex string
-    const hashArray=Array.from(new Unit8Array (hashBuffer));
+    const hashArray=Array.from(new Uint8Array (hashBuffer));
     const hashHex=hashArray.map(b=>b.toString(16).padStart(2,'0')).join('');
-    document.getElementById('hashoutput').textContent=`Hash:${hashHex}`;
+    document.getElementById('hashOutput').textContent=`Hash:${hashHex}`;
 }
+
 
