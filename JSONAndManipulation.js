@@ -25,7 +25,7 @@ function convertJsonToCsv() {
     const jsonCsvInput=document.getElementById('jsonCsvInput').value;
     try{
         const jsonArray=JSON.parse(jsonCsvInput);
-        const headers=object.keys(jsonarray[0]);
+        const headers=Object.keys(jsonArray[0]);
         const csvRows=[
             headers.join(','),
             ...jsonArray.map(row=>headers.map(header=>row[header]).join(','))
@@ -64,5 +64,6 @@ async function createHash(){
     const hashHex=hashArray.map(b=>b.toString(16).padStart(2,'0')).join('');
     document.getElementById('hashOutput').textContent=`Hash:${hashHex}`;
 }
+
 
 
