@@ -68,7 +68,7 @@ h2 + hr{
 
 /*General Sibling Selector */
 h3 ~ p{
-	font-famly: 'Georgia',serif;
+	font-family: 'Georgia',serif;
 	color: #555;
 }
 
